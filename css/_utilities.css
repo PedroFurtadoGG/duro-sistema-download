@@ -1,0 +1,877 @@
+/*
+  utilities.css */
+
+.main-content,
+.global-header,
+.global-footer {
+  clear: both;
+}
+
+.parallax {
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: top;
+  background-position-x: center !important;
+}
+
+@media only screen and (max-width: 1023px) {
+  #html .parallax {
+    background-position: center center !important;
+  }
+}
+
+:active,
+:focus {
+  outline: 0 !important;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.brand-holder {
+  line-height: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .main-content {
+    min-height: 0;
+  }
+  label,
+  .main-content {
+    -webkit-transition: all 240ms cubic-bezier(.0, .0, .58, 1.0);
+    transition: all 240ms cubic-bezier(.0, .0, .58, 1.0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.hero.-responsive .slick-slide {
+  overflow: hidden;
+}
+
+.media .-photo {
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 511px) {
+  .hero.-responsive .media .ratio {
+    padding-bottom: calc(100% / .85);
+  }
+  .hero.-single .media .ratio {
+    padding-bottom: calc(100% / 1);
+  }
+}
+
+@media only screen and (min-width: 512px) and (max-width: 1023px) {
+  .hero.-responsive .media .ratio {
+    padding-bottom: calc(100% / 1.3333);
+  }
+  .hero.-single .media .ratio {
+    padding-bottom: 30rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .hero.-responsive .media .ratio {
+    padding-bottom: 46rem;
+  }
+  .hero.-single .media .ratio {
+    padding-bottom: 36rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .section {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .section.-small {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .section.-large {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+  .section.-xlarge {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+  .section.-p {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .section.-p.-small {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .section.-p.-large {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  .section.-p.-xlarge {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  html body .section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  html body .section.-p {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.section.-p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.section.-p+.section.-p {
+  padding-top: 0;
+}
+
+.section.-p>.section.-p+.section.-p {
+  padding-top: 0;
+}
+
+.section.-p>.section.-p .section.-p:last-child {
+  padding-bottom: 0;
+}
+
+.article p {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  margin: 1.5rem 0;
+  font-family: "Roboto-Light", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+.article p:first-child {
+  margin-top: 0;
+}
+
+.article p:last-child {
+  margin-bottom: 0;
+}
+
+.article h1,
+.article h2,
+.article h3,
+.article h4,
+.article h5,
+.article h6 {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.article h1:first-child,
+.article h2:first-child,
+.article h3:first-child,
+.article h4:first-child,
+.article h5:first-child,
+.article h6:first-child {
+  margin-top: 0;
+}
+
+.box {
+  margin: 1em 0;
+  padding: 1rem;
+  -webkit-transition: all 230ms cubic-bezier(.0, .0, .58, 1.0);
+  transition: all 230ms cubic-bezier(.0, .0, .58, 1.0);
+  box-shadow: inset 0 0 0 1px #e3e3e3;
+}
+
+.box:first-child {
+  margin-top: 0;
+}
+
+.box:last-child {
+  margin-bottom: 0;
+}
+
+.box.-light {
+  padding: 1.5rem;
+  background-color: #f1f2f2;
+  box-shadow: none;
+}
+
+.line-clamp,
+.line-clamp-2,
+.line-clamp-3,
+.line-clamp-4 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.line-clamp-2 {
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  -webkit-line-clamp: 3;
+}
+
+.line-clamp-4 {
+  -webkit-line-clamp: 4;
+}
+
+
+/**
+* Flexible media embeds
+* Based on: http://alistapart.com/article/creating-intrinsic-ratios-for-video
+*/
+
+.media {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.media>.ratio {
+  display: block;
+  width: 100%;
+  padding-bottom: 100%;
+}
+
+.media>.ratio-3by1 {
+  padding-bottom: calc(100% / 3);
+}
+
+.media>.ratio-2by1 {
+  padding-bottom: 50%;
+}
+
+.media>.ratio-16by9 {
+  padding-bottom: 56.25%;
+}
+
+.media>.ratio-4by3 {
+  padding-bottom: 75%;
+}
+
+@media only screen and (max-width: 640px) {
+  .media>.-s-ratio {
+    padding-bottom: 100%;
+  }
+  .media>.-s-3by1 {
+    padding-bottom: calc(100% / 3);
+  }
+  .media>.-s-2by1 {
+    padding-bottom: 50%;
+  }
+  .media>.-s-16by9 {
+    padding-bottom: 56.25%;
+  }
+  .media>.-s-4by3 {
+    padding-bottom: 75%;
+  }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+  .media>.-m-3by1 {
+    padding-bottom: calc(100% / 3);
+  }
+  .media>.-m-2by1 {
+    padding-bottom: 50%;
+  }
+  .media>.-m-16by9 {
+    padding-bottom: 56.25%;
+  }
+  .media>.-m-4by3 {
+    padding-bottom: 75%;
+  }
+}
+
+.media>.content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.media>.content img,
+.media>.content iframe {
+  width: 100%;
+}
+
+.media.-inline>.content:not(.-caption) {
+  text-align: center;
+}
+
+.media.-inline>.content:not(.-caption)::before {
+  position: relative;
+  display: inline-block;
+  width: 1px;
+  height: 100%;
+  content: " ";
+  vertical-align: middle;
+}
+
+.media.-inline>.content:not(.-caption) img {
+  display: inline-block;
+  width: auto;
+  max-width: 95%;
+  vertical-align: middle;
+}
+
+.media.-anime:hover>.content>img {
+  -webkit-transition: all .2s cubic-bezier(.0, .0, .58, 1.0);
+  transition: all .2s cubic-bezier(.0, .0, .58, 1.0);
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15);
+}
+
+.media.-border>.content::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  -webkit-transition: border .2s;
+  transition: border .2s;
+  border-width: 0;
+  border-style: solid;
+}
+
+.media.-border:hover>.content::after {
+  border-width: 4px;
+}
+
+.media>.content {
+  z-index: auto;
+}
+
+.media>.content.-caption {
+  z-index: 20;
+}
+
+.media>.content.-top,
+.media>.content.-bottom,
+.media>.content.-middle {
+  padding: 1rem;
+}
+
+.media>.content.-top {
+  top: 0;
+  bottom: auto;
+  height: auto;
+}
+
+.media>.content.-bottom {
+  top: auto;
+  bottom: 0;
+  height: auto;
+}
+
+.media>.content.-middle {
+  top: 50%;
+  bottom: auto;
+  height: auto;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.media.-anime-overlay .ratio::after {
+  position: absolute;
+  z-index: 100;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  left: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: " ";
+  -webkit-transition: all 1s cubic-bezier(.0, .0, .58, 1.0);
+  transition: all 1s cubic-bezier(.0, .0, .58, 1.0);
+  pointer-events: none;
+  background-color: rgba(2, 18, 51, 0);
+}
+
+.media.-anime-overlay:hover>.ratio::after {
+  background-color: rgba(2, 18, 51, .6);
+}
+
+.media.-anime-overlay:hover>.content.-photo {
+  -webkit-transition: all .3s cubic-bezier(.0, .0, .58, 1.0);
+  transition: all .3s cubic-bezier(.0, .0, .58, 1.0);
+  -webkit-transform: scale(1.25);
+  transform: scale(1.25);
+}
+
+.media.-anime-overlay:hover img {
+  -moz-filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+
+/* Techniques that make content inaccessible (invisible to all users).
+* [https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html]*/
+
+.invisible,
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+:root:hover .invisible *,
+:root:hover .visually-hidden * {
+  display: none !important;
+}
+
+.truncate,
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.shadow {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+}
+
+.shadow-l {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+}
+
+.shadow-xl {
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
+}
+
+.va,
+.vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.img-holder {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.img-holder {
+  line-height: 2rem !important;
+  overflow: hidden;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.img-holder.-xs {
+  line-height: .5rem !important;
+  width: .5rem;
+  height: .5rem;
+}
+
+.img-holder.-s {
+  line-height: 1rem !important;
+  width: 1rem;
+  height: 1rem;
+}
+
+.img-holder.-m {
+  line-height: 2rem !important;
+  width: 2rem;
+  height: 2rem;
+}
+
+.img-holder.-l {
+  line-height: 4rem !important;
+  width: 4rem;
+  height: 4rem;
+}
+
+.img-holder.-xl {
+  line-height: 8rem !important;
+  width: 8rem;
+  height: 8rem;
+}
+
+.img-holder.-xxl {
+  line-height: 16rem !important;
+  width: 16rem;
+  height: 16rem;
+}
+
+.img-holder .fa {
+  line-height: inherit;
+}
+
+.pagination {
+  position: relative;
+  max-width: 100%;
+  white-space: nowrap;
+  word-spacing: -.26rem;
+}
+
+.pagination li {
+  display: inline-block;
+  vertical-align: top;
+  word-spacing: normal;
+}
+
+.pagination li+li {
+  margin-left: 2px;
+}
+
+.pagination li:first-of-type,
+.pagination li:last-of-type {
+  text-transform: capitalize;
+}
+
+.pagination li:first-of-type .fa,
+.pagination li:last-of-type .fa {
+  font-size: 25px;
+  line-height: 1;
+}
+
+.pagination li:not(:first-of-type):not(:last-of-type) span,
+.pagination li:not(:first-of-type):not(:last-of-type) a {
+  font-family: "Roboto-Medium", sans-serif;
+  line-height: 2rem;
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  padding: 0 .75rem;
+  text-align: center;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.pagination li .fa {
+  position: relative;
+  top: 2px;
+}
+
+
+/* collapse */
+
+.collapse-trigger {
+  padding-right: 2rem;
+  cursor: pointer;
+}
+
+.collapse-trigger.active .fa:before {
+  content: "\f106";
+}
+
+.collapse-trigger .fa {
+  font-size: 2rem;
+  position: absolute;
+  right: 0;
+  margin-right: 1rem;
+}
+
+.collapse {
+  display: none;
+}
+
+.news.-aside:hover h5 {
+  text-decoration: underline;
+}
+
+
+/* affix-header */
+
+@-webkit-keyframes animeAffixHeader {
+  from {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+    opacity: .5;
+  }
+}
+
+@keyframes animeAffixHeader {
+  from {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+    opacity: .5;
+  }
+}
+
+#globalHeader.fixed {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-animation: animeDropdown 460ms 0s normal ease both;
+  animation: animeDropdown 460ms 0s normal ease both;
+  -webkit-animation-timing-function: cubic-bezier(.160, .560, .170, .999);
+  animation-timing-function: cubic-bezier(.160, .560, .170, .999);
+}
+
+#globalHeader .fixed {
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, .1), 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+}
+
+#globalHeader.fixed [data-grid] {
+  -webkit-transition: none;
+  transition: none;
+}
+
+@media only screen and (max-width: 1023px) {
+  #globalHeader.fixed [data-grid] {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  font-family: "Roboto-Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.browserupgrade>p {
+  position: relative;
+  display: block;
+  margin: 1rem auto;
+  padding: .5rem 2rem;
+  text-align: center;
+  color: #ddd;
+  border-radius: .25rem;
+  background: #444;
+}
+
+.browserupgrade a {
+  font-family: "Roboto-Medium", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.browserupgrade>p>button {
+  font-family: "Roboto-Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 1.5rem;
+  line-height: .75;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  padding: .5rem 1rem;
+  cursor: pointer;
+  text-align: center;
+  color: #eee;
+  background: transparent;
+}
+
+
+/* ==========================================================================
+   Dialog
+   ========================================================================== */
+
+.overlay {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+@media only screen and (min-width: 1025px) {
+  .overlay::before {
+    position: relative;
+    left: -100rem;
+    display: inline-block;
+    width: 1px;
+    height: 100%;
+    content: " ";
+    vertical-align: middle;
+  }
+}
+
+.dialog {
+  position: relative;
+  z-index: 1000;
+  max-height: 90vh;
+  padding: 2rem;
+  -webkit-animation: animeIn .5s 0s normal ease both;
+  animation: animeIn .5s 0s normal ease both;
+  -webkit-animation-timing-function: cubic-bezier(.160, .560, .170, .999);
+  animation-timing-function: cubic-bezier(.160, .560, .170, .999);
+  text-align: left;
+  border-radius: .25rem;
+  background-color: #fff;
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+}
+
+@media only screen and (min-width: 1025px) {
+  .dialog {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+  }
+}
+
+.dialog>.content {
+  overflow: auto;
+  max-height: calc(90vh - 4rem);
+}
+
+.dialog:not(.-page) {
+  max-width: 520px;
+}
+
+.dialog.-success {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+}
+
+.dialog.-error {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+}
+
+.dialog.-success h1,
+.dialog.-success h2,
+.dialog.-success h3,
+.dialog.-success h4,
+.dialog.-success h5,
+.dialog.-success h6 {
+  font-size: 2rem;
+  text-align: center;
+  color: #00a155;
+}
+
+.dialog.error h1,
+.dialog.error h2,
+.dialog.error h3,
+.dialog.error h4,
+.dialog.error h5,
+.dialog.error h6 {
+  font-size: 2rem;
+  text-align: center;
+  color: #df402d;
+}
+
+.dialog .actions {
+  text-align: right;
+}
+
+.dialog .actions .btn:last-child {
+  margin-left: 1rem;
+}
+
+#html .btn-hide-dialog.-icon {
+  font-size: 22px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: .5rem;
+  opacity: .5;
+  background-color: transparent;
+}
+
+#html .btn-hide-dialog.-icon:hover {
+  opacity: .7;
+}
+
+
+/*
+ * collapse */
+
+[data-collapse-list] [data-target] {
+  font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 1.25rem;
+  line-height: 2.5rem;
+  clear: both;
+  overflow: hidden;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  cursor: pointer;
+  -webkit-transition: all .3s cubic-bezier(.0, .0, .58, 1.0);
+  transition: all .3s cubic-bezier(.0, .0, .58, 1.0);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  color: white;
+  background-color: #021233;
+}
+
+[data-collapse-list] [data-target]:hover {
+  background-color: #1d244c;
+}
+
+[data-collapse-list] [data-target] .fa {
+  font-size: 2rem;
+  line-height: inherit;
+  float: right;
+  color: #00aeef;
+  ;
+}
+
+[data-collapse] {
+  display: none;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+[data-collapse].in {
+  position: relative;
+}
+
+.features {
+
+}
+
+.feature {
+
+}
+
+.feature.-item .media {
+  margin-bottom: 2rem;
+}
+
+.feature.-item .content {
+
+}
+
+.feature.-item .title {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}

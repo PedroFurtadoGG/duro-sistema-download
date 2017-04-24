@@ -1,0 +1,176 @@
+/*
+  animation.css */
+
+.transition {
+  -webkit-transition: all 330ms cubic-bezier(.0, .0, .58, 1.0);
+  transition: all 330ms cubic-bezier(.0, .0, .58, 1.0);
+}
+
+.transition-s {
+  -webkit-transition: all 1000ms cubic-bezier(.0, .0, .58, 1.0);
+  transition: all 1000ms cubic-bezier(.0, .0, .58, 1.0);
+}
+
+.transition-m {
+  -webkit-transition: all 500ms cubic-bezier(.0, .0, .58, 1.0);
+  transition: all 500ms cubic-bezier(.0, .0, .58, 1.0);
+}
+
+.transition-f {
+  -webkit-transition: all 200ms cubic-bezier(.0, .0, .58, 1.0);
+  transition: all 200ms cubic-bezier(.0, .0, .58, 1.0);
+}
+
+.animation {
+  -webkit-animation: 330ms 0s normal both;
+  animation: 330ms 0s normal both;
+  -webkit-animation-timing-function: cubic-bezier(.0, .0, .58, 1.0);
+  animation-timing-function: cubic-bezier(.0, .0, .58, 1.0);
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-filter: alpha (opacity=0);
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+    filter: alpha (opacity=0);
+  }
+}
+
+.fade-in {
+  -webkit-animation: fadeIn 1s normal none;
+  animation: fadeIn 1s normal none;
+  -webkit-animation-timing-function: cubic-bezier(.770, .000, .175, 1.000);
+  animation-timing-function: cubic-bezier(.770, .000, .175, 1.000);
+}
+
+.fade-in.-xs {
+  -webkit-animation-duration: 500ms;
+  animation-duration: 500ms;
+}
+
+.fade-in.-s {
+  -webkit-animation-duration: 1500ms;
+  animation-duration: 1500ms;
+}
+
+.fade-in.-m {
+  -webkit-animation-duration: 2000ms;
+  animation-duration: 2000ms;
+}
+
+.fade-in.-l {
+  -webkit-animation-duration: 2500ms;
+  animation-duration: 2500ms;
+}
+
+.fade-in.-xl {
+  -webkit-animation-duration: 3000ms;
+  animation-duration: 3000ms;
+}
+
+.fade-in.-xxl {
+  -webkit-animation-duration: 3500ms;
+  animation-duration: 3500ms;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    -webkit-filter: alpha (opacity=0);
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+    filter: alpha (opacity=0);
+  }
+}
+
+.fade-out {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+@-webkit-keyframes animeIn {
+  0% {
+    -webkit-transform: scale(.3);
+    transform: scale(.3);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    opacity: inherit;
+  }
+}
+
+@keyframes animeIn {
+  0% {
+    -webkit-transform: scale(.3);
+    transform: scale(.3);
+    opacity: 0;
+    -webkit-filter: alpha (opacity=0);
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+    filter: alpha (opacity=0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    opacity: inherit;
+  }
+}
+
+.anime-in {
+  -webkit-animation: animeIn 330ms normal none;
+  animation: animeIn 330ms normal none;
+  -webkit-animation-timing-function: cubic-bezier(.770, .000, .175, 1.000);
+  animation-timing-function: cubic-bezier(.770, .000, .175, 1.000);
+}
+
+@-webkit-keyframes flip {
+  0% {
+    -webkit-transform: rotateY(90deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flip {
+  0% {
+    -webkit-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    opacity: 0;
+    -webkit-filter: alpha (opacity=0);
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+    filter: alpha (opacity=0);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    opacity: 1;
+    -webkit-filter: alpha (opacity=100);
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
+    filter: alpha (opacity=100);
+  }
+}
+
+.flip {
+  -webkit-animation: flip 400ms normal both;
+  animation: flip 400ms normal both;
+}

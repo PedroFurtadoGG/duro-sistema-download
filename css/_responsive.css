@@ -1,0 +1,26 @@
+/*
+ * Responsive */
+
+@media only screen and (max-device-width: 1024px) {
+  :root {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+}
+
+/*
+Small
+@media only screen and (min-width: 0px) and (max-width: 511px) {}
+
+Medium
+@media only screen and (min-width: 512px) and (max-width: 1023px) {}
+
+Large
+@media only screen and (min-width: 1024px) {}
+@media only screen and (min-width: 1024px) and (max-width: 1151px) {}
+
+Extra Large
+@media only screen and (min-width: 1152px) {}
+*/

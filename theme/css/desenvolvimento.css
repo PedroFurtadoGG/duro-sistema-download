@@ -1,0 +1,50 @@
+/*!
+ * Copyright:
+ * Update: 23-03-2016
+ * Author: Paulo Melo
+ * Developer: Paulo Melo
+ */
+
+/* Reset default styles */
+@import url("_reset.css");
+
+
+/* Base CSS */
+@import url("_base.css");
+@import url("_roboto.css");
+@import url("_typography.css");
+@import url("_form.css");
+@import url("_table.css");
+
+
+/* Grid system and page structure */
+@import url("_grid.css");
+@import url("_clearfix.css");
+
+
+/* Components: Buttons & Icons */
+@import url("_inputs.css");
+@import url("_buttons.css");
+@import url("_list.css");
+@import url("_utilities.css");
+
+
+/* Plugins */
+/*@import url("plugins/slick.css");*/
+@import url("plugins/jssocials.css");
+@import url("plugins/jssocials-theme-minima.css");
+@import url("_font-awesome.css");
+
+
+/* Theme */
+@import url("_mobile-menu.css");
+@import url("_theme.css");
+@import url("_header.css");
+@import url("_footer.css");
+@import url("style.css");
+
+
+/* Global */
+@import url("_responsive.css");
+@import url("_animation.css");
+@import url("_atomic-css.css");

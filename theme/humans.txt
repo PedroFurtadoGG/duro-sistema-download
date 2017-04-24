@@ -1,0 +1,36 @@
+/* TEAM */
+
+    Project Manager: Diego Oliveira
+    Contact: nextsites.com.br
+    Twitter: @diegooliveira
+    LinkedIn: diegooliveira
+    From: Goiânia, Goiás, Brasil
+
+    UI designer: Fernando Carvalho
+    Twitter: @fernandocarvalho
+    Contact: agenciaseculo.com.br
+    From: Goiânia, Goiás, Brasil
+
+    Designer: Iury Sahofhauzer
+    Twitter: @iurysahofhauzer
+    From: Goiânia, Goiás, Brasil
+
+    Front-end developer: Paulo Melo
+    Twitter: @MeloPaulo
+    Linkedin: MeloPaulo
+    From: Goiânia, Goiás, Brasil
+
+    Media Queries by: Paulo Melo (@MeloPaulo)
+
+
+/* THANKS */
+
+    (First) For all: Jesus
+    Porque dele e por ele, e para ele, são todas as coisas; glória, pois, a ele eternamente. Amém. Romanos 11:36
+
+
+/* SITE */
+    Last update:2012/02/04
+    Language: Portuguese
+    Doctype: HTML5
+    IDE: Atom text editor, WinSCP, Photoshop, SourceTree

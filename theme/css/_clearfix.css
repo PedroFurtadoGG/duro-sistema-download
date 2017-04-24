@@ -1,0 +1,22 @@
+/*
+ * clearfix.css */
+
+
+/**
+ * Micro clearfix
+ * Copyright © Nicolas Gallagher
+ * Source: [http://nicolasgallagher.com/micro-clearfix-hack/]
+ */
+
+.cf::before,
+.cf::after,
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.cf::after,
+.clearfix::after {
+  clear: both;
+}

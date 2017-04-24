@@ -1,0 +1,88 @@
+/*
+ form.css */
+
+.form-container {
+  position: relative;
+  clear: both;
+  white-space: normal;
+  word-spacing: normal;
+}
+
+label {
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+form.label-hidden label {
+  position: absolute;
+  z-index: -1000;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+}
+
+form .error:not(.input) {
+  font-size: .8rem;
+  line-height: 2;
+  display: block;
+  clear: both;
+  white-space: normal;
+  color: #e23535;
+}
+
+form .text-danger,
+form .text-success {
+  font-size: .85rem;
+  line-height: 2;
+}
+
+input.error,
+select.error,
+textarea.error {
+  color: #dc7878;
+  background-color: #ffe4e4;
+  box-shadow: inset 0 0 0 1px #dc7878;
+}
+
+input.success,
+select.success,
+textarea.success {
+  color: #49b381;
+  background-color: #ebfff9;
+  box-shadow: inset 0 0 0 1px #49b381;
+}
+
+form .input-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+form .input-group[data-grid]:not(.actions) {
+  margin-top: 0 !important;
+}
+
+form .input-group.last,
+form .input-group:last-child {
+  margin-bottom: 0;
+}
+
+.actions {
+  margin-top: 2rem;
+  text-align: right;
+}
+
+.actions label {
+  margin-bottom: 0;
+}
+
+.-with-btn>.btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

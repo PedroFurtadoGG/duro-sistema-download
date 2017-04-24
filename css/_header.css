@@ -1,0 +1,237 @@
+/*
+* header.css
+*/
+
+/*.page.-home .global-header.affix-header {*/
+.global-header.affix-header {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+}
+
+.page:not(.-home) .global-header {
+  background-color: white;
+}
+
+.page.-blog .global-header:not(.fixed),
+.page.-blog-interna .global-header:not(.fixed) {
+  position: relative;
+  top: auto;
+  right: auto;
+  left: auto;
+  width: initial;
+}
+
+#html .global-header.fixed {
+  background-color: #034ea2;
+}
+
+#html .global-header.fixed .btn-toggle-menu .fa {
+  color: white;
+}
+
+@media only screen and (max-width: 1023px) {
+  .global-header {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .global-header {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.global-header.fixed:not(.show-search) {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.global-header.fixed .logo {
+  max-height: 2rem;
+  width: auto;
+}
+
+.global-header .brand-holder,
+.global-header .brand-holder a {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.global-header.fixed .brand-holder a {
+  background-image: url(../img/logo-white.png);
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.global-header.fixed .brand-holder img {
+  opacity: 0;
+}
+
+@media only screen and (max-width: 1023px) {
+  .global-header .logo {
+    max-height: 3rem;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  #mobileMenu ul {
+    width: 100% !important;
+  }
+}
+
+.brand-holder {
+  text-align: left;
+}
+
+
+/* Pesquisa
+   ========================================================================== */
+
+.global-header:not(.show-search) .form-search .input {
+  position: absolute;
+  right: 0;
+  max-width: 3rem;
+  opacity: 0;
+}
+
+.global-header.show-search .main-navigation,
+.global-header.show-search .main-navigation .menu-item--search {
+  display: block;
+}
+
+.global-header.show-search .main-navigation>li:not(.menu-item--search) {
+  display: none;
+}
+
+.global-header .menu-item--search {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  color: inherit;
+}
+
+.form-search .label {
+  position: relative;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  -webkit-transition: transform 0.3s cubic-bezier(0.0, 0.0, 0.58, 1.0);
+  transition: transform 0.3s cubic-bezier(0.0, 0.0, 0.58, 1.0);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.form-search .label .fa {
+  font-size: 1.25rem;
+}
+
+.form-search .title {
+  -webkit-transition: opacity 1s cubic-bezier(0.0, 0.0, 0.58, 1.0);
+  transition: opacity 1s cubic-bezier(0.0, 0.0, 0.58, 1.0);
+  opacity: 0;
+}
+
+.form-search .-close-search {
+  opacity: 0;
+}
+
+.global-header:not(.show-search) .form-search .-close-search {
+  position: absolute;
+  top: -999999rem;
+  left: -99999rem;
+}
+
+.global-header:not(.show-search) .form-search .title {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+.global-header.show-search .form-search {
+  position: relative;
+  z-index: 10;
+  text-align: left;
+}
+
+.global-header.show-search .form-search .label {
+  display: none;
+  /*position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);*/
+}
+
+.global-header.show-search .form-search .title {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+  opacity: 1;
+}
+
+.global-header.show-search .form-search .-close-search {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 1;
+  z-index: 100;
+  color: #888;
+}
+
+.global-header .media.-user {
+  margin-right: 0.5rem;
+}
+
+.global-header .menu-item-cart a {
+  overflow: visible;
+}
+
+.global-header .media.-cart {
+  overflow: visible;
+}
+
+.global-header .media.-cart .-photo {
+  background-size: contain;
+}
+
+
+/* Tema
+   ========================================================================== */
+
+.main-navigation {
+  text-align: right;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0 0 0;
+  /*font-family: 'AvenirLTStd-Black', 'Helvetica Neue', 'Helvetica', 'Arial', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;*/
+}
+
+.global-header:not(.fixed) .main-navigation {
+  color: #034ea2;
+}
+
+#html .main-navigation a:hover {
+  color: inherit;
+}
+
+.global-header .menu-item--search {
+  color: inherit;
+}
+
+#html .global-header:not(.fixed) .dropdown {
+  /*background-color: transparent;*/
+}
